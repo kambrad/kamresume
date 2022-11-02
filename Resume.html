@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=width-device, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Resume</title>
+
+        <script src="https://kit.fontawesome.com/3fe82f1ab8.js" crossorigin="anonymous"></script>        
+
+        <!-- <link rel="stylesheet"/>  -->
+        <style>
+            @import  url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;600;700&family=Inter:wght@100;200;300;400;500;600;700&family=Roboto+Condensed&display=swap');
+            @import  url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+            :root
+            {
+                --align-content: 280px;
+                --margin-auto: auto;
+                --position-relative: relative;
+                --align-center: center;
+                --border-color: 1px solid rgb(190, 184, 184);
+            }
+            *
+            {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Cinzel', sans-serif;
+                /* border: 1px solid red; */
+            }
+            body
+            {
+                /* background-color: #F5F5DC; */
+                background-color: #b6cfde;
+            }
+            .information
+            {
+                width: 300px;
+                height: 100vh;
+                background: black;
+                position: relative;
+                left: 100px;
+                color: white;
+                overflow: hidden;
+            }
+            .information .image
+            {
+                text-align: center;
+            }
+            .information .image img
+            {
+                border-radius: 50%;
+                width: 230px;
+                height: 30vh;
+                margin: 10px 0px 10px 0px;
+                border: 5px solid white;
+                /* image-rendering: crisp-edges; */
+            }
+            .contact_header
+            {
+                border-bottom: 1px solid rgb(190, 184, 184);
+                margin: auto;
+                width: 280px;
+                position: relative;
+                padding: 10px 0px 0px 0px;
+            }
+            .contact_header h4
+            {
+                padding: 0px 0px 5px 0px;
+            }
+            .contact_wrapper
+            {
+                margin: auto;
+                position: relative;
+                width: 280px;
+                padding: 10px 0px 10px 0px;
+            }
+            .contact_point
+            {
+                display: flex;
+                justify-content: space-around;
+                align-items: var(--align-center);
+                line-height: 30px;
+            }
+            /* .contact_point:nth-child(1)
+            {
+                width: 272px;
+            } */
+            .contact_point:nth-child(1)
+            {
+                padding-right: 42px;
+            }
+            /* .contact_point:nth-child(3)
+            {
+                width: 140px;
+            } */
+            .contact_point:nth-child(3)
+            {
+                width: 150px;
+            }
+            .skill
+            {
+                margin: 10px 0px 0px 0px;
+            }
+            .skill_header
+            {
+                margin: var(--margin-auto);
+                position: var(--position-relative);
+                width: var(--align-content);
+                border-bottom: var(--border-color);
+            }
+            .skill_header h4
+            {
+                padding: 0px 0px 5px 0px;
+            }
+            .skill_wrapper
+            {
+                margin: var(--margin-auto);
+                position: var(--position-relative);
+                width: 230px;
+            }
+            .skill_wrapper .skill_point li
+            {
+                margin: 10px 0px 10px 0px;
+            }
+            .activity
+            {
+                margin: 10px 0px 0px 0px;
+            }
+            .activity_header
+            {
+                margin: var(--margin-auto);
+                position: var(--position-relative);
+                width: var(--align-content);
+                border-bottom: var(--border-color); 
+            }
+            .activity_header h4
+            {
+                padding: 0px 0px 5px 0px;
+            }
+            .activity_wrapper
+            {
+                margin: var(--margin-auto);
+                position: var(--position-relative);
+                width: 260px;
+            }
+            .activity_wrapper .activity_point
+            {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 10px 0px;
+                position: var(--position-relative);
+                right: 20px;
+            }
+            .activity_wrapper .activity_point:nth-child(2),.activity_point:nth-child(3),.activity_point:nth-child(4)
+            {
+                right: 28px;
+            } 
+            .activity_wrapper .activity_point:nth-child(2) p ,.activity_point:nth-child(3) p
+            {
+                position: relative;
+                right: 6px;
+            } 
+            .activity_wrapper .activity_point:nth-child(4) p
+            {
+                position: relative;
+                right: 10px;
+            }
+            .activity_wrapper .activity_point span i
+            {
+                font-size: 14px;
+            }
+            .activity_wrapper .activity_point p
+            {
+                font-size: 12px;
+            }
+            .personal
+            {
+                border: 20px solid black;
+                position: absolute;
+                top: 0;
+                left: 30%;
+                width: 60%;
+                height: 100vh;
+                background-color: rgb(230, 230, 230);
+                overflow: hidden;
+            }
+            .personal .name
+            {
+                height: 30vh;
+            }
+            .personal .name .name_wrapper
+            {
+                margin: 20px;
+                height: 25vh;
+            }
+            .personal .name .name_wrapper .name_title
+            {
+                position: var(--position-relative);
+                text-align: center;
+                margin: 20px;
+                font-size: 30px;
+            }
+            .personal .name .name_wrapper .name_title h1
+            {
+                letter-spacing: 5px;
+            }
+            .personal .name .name_wrapper .name_subtitle
+            {
+                margin: auto;
+                position: relative;
+                width: 200px;
+            }
+            .personal_about
+            {
+                height: 64.5vh;
+            }
+            .personal_wrapper
+            {
+                margin: var(--margin-auto);
+                position: var(--position-relative);
+                width: 835px;
+                height: inherit;
+
+            }
+            .personal_wrapper .about
+            {
+                margin: 15px var(--margin-auto);
+                position: var(--position-relative);
+                width: 690px;
+                background-color: black;
+                color: white;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            .personal_wrapper .about_header
+            {
+                border-bottom: 1px solid #b6cfde;
+                padding: 0px 0px 5px 0px;
+                margin: 0px 0px 5px 0px;
+                text-align: center;
+            }
+            .personal_wrapper .about_information
+            {
+                text-align: center;
+                width: 620px;
+                margin: auto;
+                line-height: 25px;
+            }
+            .char{
+                /* color: rgb(129, 19, 49); */
+                color: #b6cfde;
+            }
+
+            /* .education
+            {
+                width: 300px;
+                position: relative;
+                left: 70px;
+                border-bottom: 2px solid black;
+            } */
+            .education
+            {
+                position: relative;
+                left: 70px;
+                width: 300px;
+                height: 23vh;
+            }
+            .education_title
+            {
+                margin: 5px;
+                border-bottom: 2px solid black;
+            }
+            .education_point
+            {
+                text-align: center;
+                line-height: 40px;
+            }
+
+            .work
+            {
+                position: relative;
+                transform: translateY(-170px) translateX(450px);
+                width: 400px;
+                height: 23vh;
+            }
+            .work_title
+            {
+                margin: 3px;
+                border-bottom: 2px solid black;
+            }
+            .work_point
+            {
+                font-size: 12px;
+                text-align: center;
+            }
+            .work_point div
+            {
+                margin: 6px 0px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class = "information">
+            <div class= "image">
+                <img src="img/Resume/me.JPG">
+            </div>
+
+            <div class="contact">
+                <div class="contact_header">
+                    <h4>Contact</h4>
+                </div>
+                <div class="contact_info">
+                    <div class="contact_wrapper">
+                        <div class="contact_point">
+                            <span>
+                                <i class="fa-regular fa-map"></i>
+                            </span>
+                            <p>252 West Newland Dr.</p>
+                        </div>
+                        <div class="contact_point">
+                            <span>
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <p>kambrad2000@yahoo.com</p>
+                        </div>
+                        <div class="contact_point">
+                            <span>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </span>
+                            <p>555-555-5555</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill_header">
+                    <h4>Skills</h4>
+                </div>
+                <div class="skill_wrapper">
+                    <ul class="skill_point">
+                        <li>Analytical Thinker</li>
+                        <li>Time Management</li>
+                        <li>Coding</li>
+                        <li>Patient</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="activity_header">
+                    <h4>Activties</h4>
+                </div>
+                <div class="activity_wrapper">
+                    <div class="activity_point">
+                        <span>
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                        <p>https://github.com/kambrad</p>
+                    </div>
+                    <div class="activity_point">
+                        <span>
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                        <p>https://lnkd.in/eQYT_hUz</p>
+                    </div>
+                    <div class="activity_point">
+                        <span>
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                        <p>https://lnkd.in/ert4XNRM</p>
+                    </div>
+                    <div class="activity_point">
+                        <span>
+                            <i class="fa-solid fa-link"></i>
+                        </span>
+                        <p>https://lnkd.in/ebQyXE7p</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="personal">
+            <div class="name">
+                <div class="name_wrapper">
+                    <div class="name_title">
+                        <h1>K<span class="char">a</span>m<span class="char">r</span>o<span class ="char">n</span> B<span class="char">r</span>a<span class="char">d</span>f<span class="char">o</span>r<span class="char">d</span></h1>
+                    </div>
+                    <div class="name_subtitle">
+                        <h3>Future Developer</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="personal_about">
+                <div class="personal_wrapper">
+                    <div class="about">
+                        <div class="about_header">
+                            <h3>About Me</h3>
+                        </div>
+                        <div class="about_information">
+                            <p>Motivated with 3 years of learning, exploring, experimenting many programming languages.
+                                I managed to work on many mock websites in html, css, and javascript. 
+                                Since, I dont have any experience as a web developer, I manage to learn how to code and invest my
+                                time into learning as many programming languages as possible. Such as html, css, javascript, php, mysql, and sass.
+                                Web development and penetration testing gave me a broader understanding on how to program the correct way. My main goal is to become
+                                a qualified web developer. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <div class="education_wrapper">
+                            <div class="education_title">
+                                <h4>Education</h4>
+                            </div>
+
+                            <div class="education_point">
+                                <p>Coastal Carolina University</p>
+                                <p>(2018 - 2024)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <div class="work_wrapper">
+                            <div class="work_title">
+                                <h4>Work Experience</h4>
+                            </div>
+                            <div class="work_point">
+                                <p>* No work experience as a developer</p>
+                                <div>
+                                    <p>Amazon</p>
+                                    <p>Columbia, SC</p>
+                                    <p>(2020 - 2021)</p>
+                                </div>
+                                <div>
+                                    <p>Olive Garden</p>
+                                    <p>Florence, SC</p>
+                                    <p>(2021 - 2022)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="js/Resume.js"></script>
+</html>
